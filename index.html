@@ -11,6 +11,7 @@
         <link rel="shortcut icon" href="https://res.cloudinary.com/tinkerbell/image/upload/c_scale,h_16,q_100,r_50%,w_16/v1578256576/20191019_154635_dqpfgm.jpg" type="image/png/jpg">
         <link href="https://fonts.googleapis.com/css2?family=Montez&family=Itim&family=Amita&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="swiper.min.css" rel="stylesheet">
         <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
     <style>
@@ -74,7 +75,7 @@
         }
         .bio_text{
             color: grey;
-            font-family: 'Roboto', cursive;
+            font-family: 'Itim', cursive;
         }
         .fa{
             color: palegreen;
@@ -84,12 +85,13 @@
         /* stack wrapper */
         .stack_wrapper{
             margin-top: 40px;
+            padding-bottom: 50px;
         }
         ul{
-            margin-top: 10px;
+            
             color: grey;
             list-style: none;
-            font-family: 'Roboto', cursive;
+            font-family: 'Itim', cursive;
         }
         li::before{
             content: '\2022';
@@ -98,6 +100,7 @@
             font-size: 20px;
             display: inline-block;
             width: 1em;
+            margin-top: 10px;
         }
         .contact_button{
             padding: 10px 25px;
@@ -115,6 +118,47 @@
         .contact_button:hover{
             cursor: pointer;
             transform: scale(1.1);
+            border: 2px solid #ffd4ef;
+            background: white;
+        }
+
+        /* project slide section */
+        .swiper-container{
+            width: 100%;
+            padding-top: 20px;
+            height: 65vh;
+        }
+        .swiper-slide{
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 340px;
+            background-color: #ffd4ff73;
+        }
+        img{
+            width: 100%;
+        }
+        /* .swiper-slide .imgBx{
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        } */
+        .swiper-slide .details{
+            box-sizing: border-box;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .swiper-slide .details h3{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .swiper-slide .details h3 span{
+            color: #f44336;
+            font-size: 16px;
+            
         }
 
 
@@ -151,7 +195,7 @@
                 margin: 50px auto 0 auto;
             }
             ul{
-                margin: 30px 0 30px 0;
+                margin: 0 0 30px 0;
             }
             li{
                 display: inline;
@@ -208,10 +252,97 @@
                         <button class="contact_button">Download CV</button>
                     </div>
                 </div>
-
-                
             </section>
+
+            <section class="project_section">
+                <h3 class="bio_heading">Some of my works</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1588544623/dashboard-1_kpxoz5.png">
+                            </div>
+                            <div class="details">
+                                <h3>Social media dashboard<br><span>Frontend mentor project</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672487/udacity_blog_zbbw13.png">
+                            </div>
+                            <div class="details">
+                                <h3>For the love of code<br><span> Udacity Frontend Nanodegree project</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672452/food-chef_r9bhrl.png">
+                            </div>
+                            <div class="details">
+                                <h3>Food Chef Website<br><span>A restaurant website</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="adult-attractive-beautiful-871495.jpg">
+                            </div>
+                            <div class="details">
+                                <h3>Chisom Peters<br><span>UI/UX Designer</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="adult-beautiful-beauty-413727.jpg">
+                            </div>
+                            <div class="details">
+                                <h3>Cherry Lancaster<br><span>Software Engineer</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="afro-attractive-beautiful-2253065.jpg">
+                            </div>
+                            <div class="details">
+                                <h3>Nike Niyi<br><span>DevOps</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="attractive-beautiful-beauty-1913295.jpg">
+                            </div>
+                            <div class="details">
+                                <h3>Sara Sheen<br><span>Backend Engineer</span></h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--Add Pagination-->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            
         </main>
+
+
+        <script src="swiper.min.js"></script>
+        <script>
+            let swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        </script>
     </body>
 </html>
                 
