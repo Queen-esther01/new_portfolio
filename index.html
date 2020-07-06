@@ -80,9 +80,7 @@
             color: grey;
             font-family: 'Itim', cursive;
         }
-        .fa{
-            color: palegreen;
-        }
+        
 
 
         /* stack wrapper */
@@ -129,7 +127,8 @@
         }
 
         /* project slide section */
-        .project_heading{
+        .project_heading,
+        .article_heading{
             padding: 20px 30px;
         }
         .swiper-container{
@@ -165,7 +164,7 @@
             color: white;
             font-size: 20px;
         }
-        .swiper-slide .details h3 span{
+        .details span{
             color:#ffd4ef;
             font-size: 0.8em;
         }
@@ -198,6 +197,9 @@
             }
             .bio_wrapper{
                 width: 80%;
+            }
+            .swiper-container{
+                height: 43vh;
             }
         }
 
@@ -233,6 +235,9 @@
                 display: inline-block;
                 width: 0.6em;
                 margin-left: 15px;
+            }
+            .swiper-container{
+                height: 43vh;
             }
         }
     </style>
@@ -397,6 +402,47 @@
                 </div>
             </section>
             
+            <section>
+                <div class="article_wrapper">
+                    <h3 class="bio_heading article_heading"><i class="fa fa-star"></i> Articles that i've written</h3>
+                    <div class="article_items">
+                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071327/cors_ov6wkj.png" alt="an image of cors">
+                        <h3>Introduction to Cors</h3>
+                        <p>Cross-Origin Resource Sharing (CORS) is a security measure that defines how two URLs interact with each other.
+                            Resource sharing is the act of data exchange between two or more urls. For example, you make an api GET request
+                            and you get a response back or you click on a link to view cute cat videos and the page opens up with hundreds of 
+                            videos for you to view, the server on which the cute cat videos are hosted on is sharing its resource with you. <a href="https://thewebfor5.com/p/general/introduction-to-cors/">Read More</a>
+                        </p>
+                    </div>
+                    <div class="article_items">
+                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071327/what-is-git_upwrww_hczbbk.jpg" alt="an image of git">
+                        <h3>Introduction to git</h3>
+                        <p>Git, simply put is a tool which we use to track the changes we make in our code while developing software.
+                            Tracking the changes we make is an amazing feature of git but the best part is git allows multiple developers 
+                            to work on a single project together without overwriting each other’s code. Remember the saying “too many cooks 
+                            spoil the broth”, not in git. The more the merrier.
+                        </p>
+                    </div>
+                    <div class="article_items">
+                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071328/parameters-arguments_hbrnzt_xhrp88.png" alt="an image of cors">
+                        <h3>Parameters and Arguments</h3>
+                        <p>Parameters and arguments are a source of confusion to some developers. They are usually mistaken for each other, 
+                            as a result,used interchangeably.It is very easy to get these terms mixed up because they are both used together 
+                            in functions and methods. Knowing which, is which, may not change the way you use JavaScript but it gives better 
+                            insights into what you are doing. Let's look at these two terms.
+                        </p>
+                    </div>
+                    <div class="article_items">
+                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071551/cloud_computing_wp79rz.jpg" alt="an image of clouds">
+                        <h3>Cloud Computing</h3>
+                        <p>So cloud computing simply put is paying to utilize the services of cloud providers. You pay, they allow you host 
+                            your site or app/or create a new one on their platform, create virtual machines online, create containerized 
+                            applications, increase compute power on your system (maybe through virtual machine), store your data and so 
+                            many other things.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
 
 
