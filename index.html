@@ -52,10 +52,13 @@
             transition: 400ms;
             font-family: 'Roboto', cursive;
         }
-
         .hire_button:hover{
             border: 2px solid #ffd4ef;
             color: #ffd4ef;
+        }
+        .hire_button a{
+            text-decoration: none;
+            color: white;
         }
 
         /* bio section */
@@ -88,7 +91,6 @@
             padding-bottom: 50px;
         }
         ul{
-            
             color: grey;
             list-style: none;
             font-family: 'Itim', cursive;
@@ -108,7 +110,7 @@
             border-radius: 10rem;
             background: none;
             border-bottom: 2px solid #40012F;
-            box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.411);
+            /* box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.411); */
             color: #40012F;
             margin: 5px 5px 0 5px;
             outline: none;
@@ -121,19 +123,24 @@
             border: 2px solid #ffd4ef;
             background: white;
         }
+        .contact_button a{
+            text-decoration: none;
+            color: #40012F;
+        }
 
         /* project slide section */
+        .project_heading{
+            padding: 20px 30px;
+        }
         .swiper-container{
             width: 100%;
-            padding-top: 20px;
-            height: 65vh;
+            height: 40vh;
         }
         .swiper-slide{
             background-position: center;
             background-size: cover;
             width: 300px;
-            height: 340px;
-            background-color: #ffd4ff73;
+            height: 225px;
         }
         img{
             width: 100%;
@@ -145,20 +152,38 @@
         } */
         .swiper-slide .details{
             box-sizing: border-box;
-            font-size: 20px;
-            padding: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .swiper-slide .details h3{
             margin: 0;
             padding: 0;
-            font-size: 20px;
             text-align: center;
-            line-height: 20px;
+            color: white;
+            font-size: 20px;
         }
         .swiper-slide .details h3 span{
-            color: #f44336;
-            font-size: 16px;
-            
+            color:#ffd4ef;
+            font-size: 0.8em;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: .5s ease;
+            background: linear-gradient(50deg,#40012F,black);
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper-slide:hover .overlay {
+            opacity: 1;
         }
 
 
@@ -217,7 +242,7 @@
                 <div class="header_wrapper">
                     <h1>Hi, I'm Esther Ejidike.</h1>
                     <p class="title">The Frontend Web Developer</p>
-                    <button class="hire_button">Let's Talk</button>
+                    <button class="hire_button"><a href="mailto:ejidikeesther@gmail.com?Subject=I%Want%to%Work%With%You">Let's Talk</a></button>
                 </div>
             </header>
 
@@ -248,73 +273,124 @@
                         <li>Wordpress cms</li>
                     </ul>
                     <div>
-                        <button class="contact_button">Contact Me</button>
+                        <button class="contact_button"><a href="mailto:ejidikeesther@gmail.com?Subject=I%Want%to%Work%With%You"> Contact Me </a> </button>
                         <button class="contact_button">Download CV</button>
                     </div>
                 </div>
             </section>
 
             <section class="project_section">
-                <h3 class="bio_heading">Some of my works</h3>
+                <h3 class="bio_heading project_heading"><i class="fa fa-star"></i> Some of my works</h3>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="imgBx">
                                 <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1588544623/dashboard-1_kpxoz5.png">
                             </div>
-                            <div class="details">
-                                <h3>Social media dashboard<br><span>Frontend mentor project</span></h3>
-                            </div>
+                            <a href="https://social-media-dashboard-git-master.queen-esther01.now.sh/">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>Social media dashboard<br><span>A Frontend mentor project</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <div class="imgBx">
                                 <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672487/udacity_blog_zbbw13.png">
                             </div>
-                            <div class="details">
-                                <h3>For the love of code<br><span> Udacity Frontend Nanodegree project</span></h3>
-                            </div>
+                            <a href="https://queen-esther01.github.io/For-the-Love-of-Code/">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>For the love of code<br><span>A Udacity Frontend Nanodegree blog project</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <div class="imgBx">
                                 <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672452/food-chef_r9bhrl.png">
                             </div>
-                            <div class="details">
-                                <h3>Food Chef Website<br><span>A restaurant website</span></h3>
-                            </div>
+                            <a href="https://queen-esther01.github.io/Food-Chef/">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>Food Chef Website<br><span>A restaurant website</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <div class="imgBx">
-                                <img src="adult-attractive-beautiful-871495.jpg">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672428/geosearch_web_app_cChdsKfs-8JrisKfs_obocqx.png">
                             </div>
-                            <div class="details">
-                                <h3>Chisom Peters<br><span>UI/UX Designer</span></h3>
-                            </div>
+                            <a href="https://queen-esther01.github.io/Geo-Search-web-app">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>Geo Search<br><span>returns the weather conditions of various cities in the world.</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <div class="imgBx">
-                                <img src="adult-beautiful-beauty-413727.jpg">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672424/javascript_calculator_en85y7.png">
                             </div>
-                            <div class="details">
-                                <h3>Cherry Lancaster<br><span>Software Engineer</span></h3>
-                            </div>
+                            <a href="https://codepen.io/King_Esther/full/qBWXLZY">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>Calculator<br><span>A Beautiful calculator made with HTML, CSS and JavaScript.</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <div class="imgBx">
-                                <img src="afro-attractive-beautiful-2253065.jpg">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672449/www.tonyosime.com__iPad_Pro__pKhdsKfs-Ff7gsKfs_p6m5wi.png">
                             </div>
-                            <div class="details">
-                                <h3>Nike Niyi<br><span>DevOps</span></h3>
-                            </div>
+                            <a href="tonyosime.com">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>Tony Osime<br><span>Employee Training and Consulting Company website.</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <div class="imgBx">
-                                <img src="attractive-beautiful-beauty-1913295.jpg">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1587672439/kidsntech_iz6caz.png">
                             </div>
-                            <div class="details">
-                                <h3>Sara Sheen<br><span>Backend Engineer</span></h3>
-                            </div>
+                            <a href="https://queen-esther01.github.io/Kids-n-Tech/">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>Kids 'n' Tech<br><span>A learn to code site for kids</span></h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587671046/rick_and_morty_2_or6lzz.png">
+                            </div>
+                            <a href="https://codepen.io/King_Esther/full/QWwMGZq">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>A cartoon web app<br><span>Rick and Morty random characters</span></h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="https://res.cloudinary.com/tinkerbell/image/upload/q_auto,f_auto/v1587672433/react-todo-full_y72m79.png">
+                            </div>
+                            <a href="https://gallant-edison-3e68c5.netlify.com/">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h3>To-do web app<br><span>Simple web app created with React</span></h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <!--Add Pagination-->
                     <div class="swiper-pagination"></div>
