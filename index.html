@@ -127,10 +127,11 @@
         }
 
         /* project slide section */
-        .project_heading,
-        .article_heading{
-            padding: 20px 30px;
+        .project_section{
+            border-top: 5px solid #40012F;
+            padding: 20px 0 50px 30px;
         }
+        
         .swiper-container{
             width: 100%;
             height: 40vh;
@@ -162,7 +163,7 @@
             padding: 0;
             text-align: center;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
         }
         .details span{
             color:#ffd4ef;
@@ -185,6 +186,64 @@
             opacity: 1;
         }
 
+        /* article section */
+        .article_section{
+            border-top: 5px solid #40012F;
+            padding-bottom: 40px;
+        }
+        .article_heading{
+            padding: 30px 0 0 30px;
+        }
+        .articles{
+            width: 90%;
+            margin: auto;
+            display: grid;
+                /* minmax means never less than 100px and never bigger than 1 fraction*/
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            grid-gap: 20px;
+            text-align: left;
+        }
+        .article_items{
+            margin-top: 25px;
+        }
+        .article_items h3{
+            text-align: center;
+        }
+        .article_items img{
+            width: 100%;
+        }
+        .article_title{
+            background: -webkit-linear-gradient(50deg, #330026, black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Roboto', cursive;
+        }
+        .article_text{
+            color: grey;
+            font-family: 'Itim', cursive;
+        }
+        .article_text a{
+            background: -webkit-linear-gradient(50deg, #330026, coral);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* footer section */
+        footer{
+            background-color: #330026;
+            color: #ffe6f6;
+            text-align: center;
+            padding: 20px 0 10px 0;
+        }
+        footer img{
+            width: 25px;
+            margin: 5px;
+        }
+        footer p{
+            font-size: 0.8em;
+        }
+
+
 
 
 
@@ -202,6 +261,21 @@
                 height: 43vh;
             }
         }
+
+        @media(min-width:650px){
+            footer{
+                display: flex;
+                justify-content: space-around;
+                padding: 0;
+            }
+            footer img{
+                margin: 15px 0 0 10px;
+            }
+            footer p{
+                font-size: 1em;
+            }
+        }
+        
 
         @media(min-width: 900px) {
             h1{
@@ -237,8 +311,26 @@
                 margin-left: 15px;
             }
             .swiper-container{
-                height: 43vh;
+                height: 55vh;
             }
+            .swiper-slide{
+                background-position: center;
+                background-size: cover;
+                width: 350px;
+                height: 220px;
+            }
+            
+            .overlay{
+                height: 270px;
+            }
+            /* .articles{
+                width: 80%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+                grid-gap: 20px;
+                text-align: left;
+            } */
         }
     </style>
     <body>
@@ -278,8 +370,8 @@
                         <li>Wordpress cms</li>
                     </ul>
                     <div>
-                        <button class="contact_button"><a href="mailto:ejidikeesther@gmail.com?Subject=I%Want%to%Work%With%You"> Contact Me </a> </button>
-                        <button class="contact_button">Download CV</button>
+                        <button class="contact_button"><a href="mailto:ejidikeesther@gmail.com?Subject=I_Want_to_Work_With_You"> Contact Me </a> </button>
+                        <button class="contact_button download_button"><a href="Esther_Ejidike__CV.pdf" download="Esther_Ejidike_CV">Download CV</a></button>
                     </div>
                 </div>
             </section>
@@ -402,47 +494,51 @@
                 </div>
             </section>
             
-            <section>
+            <section class="article_section">
                 <div class="article_wrapper">
-                    <h3 class="bio_heading article_heading"><i class="fa fa-star"></i> Articles that i've written</h3>
-                    <div class="article_items">
-                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071327/cors_ov6wkj.png" alt="an image of cors">
-                        <h3>Introduction to Cors</h3>
-                        <p>Cross-Origin Resource Sharing (CORS) is a security measure that defines how two URLs interact with each other.
-                            Resource sharing is the act of data exchange between two or more urls. For example, you make an api GET request
-                            and you get a response back or you click on a link to view cute cat videos and the page opens up with hundreds of 
-                            videos for you to view, the server on which the cute cat videos are hosted on is sharing its resource with you. <a href="https://thewebfor5.com/p/general/introduction-to-cors/">Read More</a>
-                        </p>
-                    </div>
-                    <div class="article_items">
-                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071327/what-is-git_upwrww_hczbbk.jpg" alt="an image of git">
-                        <h3>Introduction to git</h3>
-                        <p>Git, simply put is a tool which we use to track the changes we make in our code while developing software.
-                            Tracking the changes we make is an amazing feature of git but the best part is git allows multiple developers 
-                            to work on a single project together without overwriting each other’s code. Remember the saying “too many cooks 
-                            spoil the broth”, not in git. The more the merrier.
-                        </p>
-                    </div>
-                    <div class="article_items">
-                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071328/parameters-arguments_hbrnzt_xhrp88.png" alt="an image of cors">
-                        <h3>Parameters and Arguments</h3>
-                        <p>Parameters and arguments are a source of confusion to some developers. They are usually mistaken for each other, 
-                            as a result,used interchangeably.It is very easy to get these terms mixed up because they are both used together 
-                            in functions and methods. Knowing which, is which, may not change the way you use JavaScript but it gives better 
-                            insights into what you are doing. Let's look at these two terms.
-                        </p>
-                    </div>
-                    <div class="article_items">
-                        <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071551/cloud_computing_wp79rz.jpg" alt="an image of clouds">
-                        <h3>Cloud Computing</h3>
-                        <p>So cloud computing simply put is paying to utilize the services of cloud providers. You pay, they allow you host 
-                            your site or app/or create a new one on their platform, create virtual machines online, create containerized 
-                            applications, increase compute power on your system (maybe through virtual machine), store your data and so 
-                            many other things.
-                        </p>
+                    <h3 class="bio_heading article_heading"><i class="fa fa-star"></i> Articles i've written</h3>
+                    <div class="articles">
+                        <div class="article_items">
+                            <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071328/parameters-arguments_hbrnzt_xhrp88.png" alt="parameters-and-arguments">
+                            <h3 class="article_title">Parameters and Arguments</h3>
+                            <p class="article_text">Parameters and arguments are a source of confusion to some developers. They are usually mistaken for each other, 
+                                as a result,used interchangeably.It is very easy to get these terms mixed up.... <a href="https://thewebfor5.com/p/javascript/parameters-and-arguments/">Read More</a>
+                            </p>
+                        </div>
+                        <div class="article_items">
+                            <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071327/what-is-git_upwrww_hczbbk.jpg" alt="an image of git">
+                            <h3 class="article_title">Introduction to git</h3>
+                            <p class="article_text">Git, simply put is a tool which we use to track the changes we make in our code while developing software.
+                                Tracking the changes we make is an amazing feature of git but the best part is git... <a href="https://thewebfor5.com/p/git/introduction-to-git/"> Read More</a>
+                            </p>
+                        </div>
+                        <div class="article_items">
+                            <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071327/cors_ov6wkj.png" alt="an image of cors">
+                            <h3 class="article_title">Introduction to Cors</h3>
+                            <p class="article_text">Cross-Origin Resource Sharing (CORS) is a security measure that defines how two URLs interact with each other.
+                                Resource sharing is the act of data exchange between two or more urls... <a href="https://thewebfor5.com/p/general/introduction-to-cors/">Read More</a>
+                            </p>
+                        </div>
+                        <div class="article_items">
+                            <img src="https://res.cloudinary.com/tinkerbell/image/upload/v1594071551/cloud_computing_wp79rz.jpg" alt="an image of clouds">
+                            <h3 class="article_title">Cloud Computing</h3>
+                            <p class="article_text">So cloud computing simply put is paying to utilize the services of cloud providers. You pay, they allow you host 
+                                your site or app/or create a new one on their platform, create virtual machines online... <a href="https://dev.to/catheryn/cloud-computing-101-13jp">Read More</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <footer>
+                <div class="social_container">
+                    <a href="github.com/Queen-esther01"><img src="github.png" alt="github-icon"></a>
+                    <a href="mailto:ejidikeesther@gmail.com?Subject=I_Want_to_Work_With_You"><img src="mail.png" alt="email-icon"></a>
+                    <a href="twitter.com/lady_catheryn"><img src="twitter.png" alt="twitter-icon"></a>
+                </div>
+                <p>Designed by <a href="theebuka.github.io">Ebuka</a> &#127912; & Developed by Esther &#128187;</p>
+                <p>&copy; 2020. All rights reserved</p>
+            </footer>
         </main>
 
 
